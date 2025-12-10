@@ -1,65 +1,126 @@
 import Image from "next/image";
+import Link from "next/link";
+import Stars from "./components/Stars";
+import Skills from "./components/Skills";
 
-export default function Home() {
+export const metadata = {
+  title: "Shahzaib Aqeel – Full-Stack Web Developer",
+  description:
+    "I build modern, responsive, and high-performing full-stack web applications using Next.js, Tailwind CSS, MongoDB, and TypeScript.",
+  keywords: [
+    "Shahzaib Aqeel",
+    "Full Stack Developer",
+    "Next.js Developer",
+    "React Developer",
+    "JavaScript Developer",
+    "TypeScript Developer",
+    "MongoDB Developer",
+    "Portfolio",
+    "Web Developer Pakistan",
+  ],
+  openGraph: {
+    title: "Shahzaib Aqeel – Full-Stack Web Developer",
+    description:
+      "Building modern, responsive, and high-performing web applications with clean UI and scalable backend architecture.",
+    url: "https://shahzaibaqeel.vercel.app/",
+    siteName: "Shahzaib Aqeel Portfolio",
+    images: [
+      {
+        url: "https://shahzaibaqeel.vercel.app/shabby.png",
+        width: 1200,
+        height: 630,
+        alt: "Shahzaib Aqeel Portfolio Preview",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shahzaib Aqeel – Full-Stack Web Developer",
+    description:
+      "I build modern, responsive, and high-quality full-stack applications with Next.js, Tailwind, and MongoDB.",
+    images: ["https://shahzaibaqeel.vercel.app/shabby.png"],
+  },
+};
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <div>
+      <div className="bg-linear-to-r from-[#01041F] to-[#08222E] pt-8">
+        <Stars />
+        <div className="overflow-x-hidden">
+        <main className="min-h-screen items-center">
+          <div className="px-10">
+            <p className="text-base mt-16 sm:mt-24 sm:text-base text-center sm:text-left">
+              CUSTOM DESIGNED, CUSTOM CODED
+            </p>
+            <h1 className="sm:text-6xl text-4xl font-bold sm:mt-4 mt-2 text-center sm:text-left">
+              Hello, I'm <br /> Shahzaib Aqeel
+            </h1>
+            <p
+              className="mt-4 text-base sm:text-lg sm:text-neutral-400 text-gray-100 relative z-20 text-center sm:text-left"
+              style={{ fontFamily: "Arial, sans-serif" }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+              I’m a full-stack web developer focused on building modern,{" "}
+              <span className="hidden lg:inline">
+                <br />
+              </span>
+              responsive, and high-quality web applications with clean code,{" "}
+              <span className="hidden lg:inline">
+                <br />
+              </span>
+              smooth performance, and real-world functionality.
+            </p>
+
+            <div className="flex items-center gap-6">
+              <Link href="/projects" className="mt-8 inline-block">
+                <button
+                  className="bg-linear-to-r from-gray-300 to-gray-100 text-[#001F3F] text-base sm:px-12 sm:py-3 rounded-4xl cursor-pointer px-8 py-3 ml-5 sm:ml-0
+        drop-shadow-[0_0_5px_#fff] drop-shadow-[0_0_1px_#0ff] drop-shadow-[0_0_5px_#0ff]
+        hover:from-white hover:to-gray-100 hover:drop-shadow-[0_0_10px_#0ff] transition-all duration-300 z-20 relative"
+                >
+                  View My Work
+                </button>
+              </Link>
+              <Link href={"/about"}>
+                <button
+                  className="
+  sm:px-12 sm:py-3 rounded-4xl cursor-pointer px-8 py-3 
+  border-2 border-white text-white mt-8 inline-block
+  bg-linear-to-r from-[#030F18] to-[#020F25]
+  hover:from-[#43B7FF] hover:to-[#43B7FF]
+  transition-all duration-300 z-20 relative"
+                >
+                  About Me
+                </button>
+              </Link>
+            </div>
+
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+              src={"/shabby.png"}
+              alt="Shahzaib"
+              width={300}
+              height={250}
+              className="rounded-full sm:float-right sm:mr-[300px] sm:mt-[-350px] border border-[white]  mx-auto mt-10 lg:float-right lg:mr-[300px] lg:mt-[-350px]"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+
+          <div>
+            <Image
+              src="/hero-dark.svg"
+              alt=""
+              width={600}
+              height={400}
+              className="w-full h-auto absolute z-10 sm:-mt-[130px] -mt-[50px]"
+            />
+          </div>
+        </main>
         </div>
-      </main>
+      </div>
+      <div className="bg-[#030F18] h-max sm:-mt-5 -mt-24">
+        <Skills />
+      </div>
     </div>
   );
 }

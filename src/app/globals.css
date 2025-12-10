@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail:wght@400&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -22,5 +24,63 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  
+}
+
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.6);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 2.5s infinite ease-in-out;
+}
+@keyframes blinkStar {
+  0%,100% { opacity: 0.2; }
+  50% { opacity: 1; }
+}
+
+.blink-star {
+  animation: blinkStar 1.8s infinite ease-in-out !important;
+}
+
+.star-glow {
+  box-shadow: 0 0 4px rgba(255,255,255,0.8);
+}
+
+@keyframes shootingStar {
+  0% {
+    transform: translate(0, 0) rotate(-45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(1200px, 1200px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+.shooting-star {
+  position: absolute;
+  width: 2px;                 
+  height: 40px;               
+  background: linear-gradient(135deg, white, transparent); 
+  transform: rotate(45deg);
+  animation: shootingStar 1.5s linear forwards; 
+  z-index: 50;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 4s infinite !important;
 }
