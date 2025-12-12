@@ -42,7 +42,7 @@ const pricingPlans = [
 
 export default function PricingCards() {
   return (
-    <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10 pt-15 pb-20">
+    <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-1 xl:grid-cols-3 xl:p-2 p-5 pt-15 pb-20 xl:mt-5 xl:pb-10">
       {pricingPlans.map((plan, idx) => (
         <div
           key={idx}
@@ -50,7 +50,7 @@ export default function PricingCards() {
           hover:border-[#4CC9FF] shadow-[#0ff]/100"
         >
           {/* Plan Name */}
-          <h2 className="text-3xl font-bold text-[white] mb-4">{plan.name}</h2>
+          <h2 className="sm:text-3xl text-2xl font-bold text-[white] mb-4">{plan.name}</h2>
 
           {/* Features */}
           <ul className="flex-1 space-y-2 mb-6 text-gray-300 text-sm font-thin"
@@ -65,12 +65,12 @@ export default function PricingCards() {
           </ul>
 
           {/* Price */}
-          <div className="sm:text-3xl text-xl font-extrabold text-white mb-4">Rs. {plan.price}</div>
+          <div className="sm:text-2xl text-xl font-extrabold text-white mb-4">Rs. {plan.price}</div>
 
           {/* Button */}
           <Link href="/contact">
             <button
-            className="bg-linear-to-r from-gray-300 to-gray-100 text-[#001F3F] text-base sm:px-23 sm:py-4 w-full py-3 rounded-4xl cursor-pointer
+            className="bg-linear-to-r from-gray-300 to-gray-100 text-[#001F3F] text-base sm:px-23 sm:py-3 w-full py-3 rounded-4xl cursor-pointer
                        drop-shadow-[0_0_5px_#fff] drop-shadow-[0_0_1px_#0ff] drop-shadow-[0_0_5px_#0ff]
                        hover:from-white hover:to-gray-100 hover:drop-shadow-[0_0_10px_#0ff] transition-all duration-300"
           >

@@ -31,15 +31,15 @@ export default function Pricing() {
           Pricing
         </h1>
       </div>
-      <div className="min-h-screen w-full mt-24 text-white ">
-        <div className="flex flex-col sm:flex-row sm:items-start items-center justify-between px-10">
+      <div className="min-h-screen w-full mt-24 text-white px-4 sm:px-6 md:px-10 max-w-7xl mx-auto">
+        <div className="flex flex-col sm:flex-row sm:items-start items-center justify-between gap-6">
         {/* Left: Text */}
-        <div className="space-y-2">
-          <h1 className="text-[#43B7DA] tracking-widest text-xl -mt-10 sm:mt-0 text-center">
+        <div className="space-y-2 w-full sm:w-auto">
+          <h1 className="text-[#43B7DA] tracking-widest text-xl -mt-10 sm:mt-0 text-center sm:text-left">
             Our Pricing
           </h1>
-          <h1 className="sm:text-5xl text-3xl text-center">PRICING PACKAGES FOR</h1>
-          <h1 className="sm:text-5xl text-3xl text-center">EVERY BUDGET</h1>
+          <h1 className="sm:text-5xl text-3xl text-center sm:text-left">PRICING PACKAGES FOR</h1>
+          <h1 className="sm:text-5xl text-3xl text-center sm:text-left">EVERY BUDGET</h1>
         </div>
 
         {/* Right: Button */}

@@ -40,7 +40,7 @@ export default function BlogPage(){
               </div>
               <div className="sm:min-h-screen h-60 w-full mt-24 text-white">
                 <h1 className="text-center sm:text-5xl text-3xl text-[#43B7FF] mb-5">Blogs are coming soon...</h1>
-                <Image src={"/trees-dark.svg"} alt="trees" width={1920} height={1080} className="w-full hidden sm:block"/>
+                <Image src={"/trees-dark.svg"} alt="trees" width={1920} height={1080} className="mt-20 w-full hidden xl:block"/>
               </div>
             
         </main>

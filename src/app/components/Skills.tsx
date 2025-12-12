@@ -91,7 +91,7 @@ export default function Skills() {
             <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 text-center">
               {skill.name}
             </h3>
-            <p className="text-sm sm:text-base text-center">{skill.description}</p>
+            <p className="text-sm sm:text-base text-center" style={{ fontFamily: "Arial, sans-serif" }}>{skill.description}</p>
           </div>
         ))}
       </div>

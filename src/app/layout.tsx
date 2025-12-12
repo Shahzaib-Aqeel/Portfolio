@@ -29,11 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
+    <html lang="en" className="overflow-x-hidden sm:overflow-visible">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-x-hidden sm:oveflow-visible`}
       >
-        <div className="bg-linear-to-r from-[#01041F] to-[#08222E] pt-8"></div>
+        <div className="bg-linear-to-r from-[#01041F] to-[#08222E] pt-8 overflow-visible"></div>
         <Navbar />
         {children}
         <div className="bg-[#01060A] relative z-21 pt-20">

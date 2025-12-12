@@ -49,7 +49,7 @@ export default function Navbar() {
       <Link href="/">
         <div className="relative cursor-pointer">
           <Image
-            className="ml-6 max-w-full"
+            className="ml-2 sm:ml-4 md:ml-6 max-w-full h-auto"
             src="/tree.png"
             alt="Logo"
             width={200}
@@ -57,13 +57,13 @@ export default function Navbar() {
           />
 
           <h1
-            className={`absolute top-2 left-22 text-xl font-extrabold text-[white]`}
+            className={`absolute top-2 left-16 sm:left-20 md:left-22 sm:text-xl md:text-base lg:text-xl text-base font-extrabold text-[white]`}
           >
             Shahzaib Aqeel
           </h1>
 
           <h1
-            className={`${yellowtail.className} absolute top-9 left-30 text-2xl font-extrabold text-[#C1DEF2]
+            className={`${yellowtail.className} absolute top-9 left-20 sm:left-24 md:left-28 xl:text-2xl text-base sm:text-lg font-extrabold text-[#C1DEF2]
             drop-shadow-[0_0_5px_#fff] drop-shadow-[0_0_10px_#0ff] drop-shadow-[0_0_20px_#0ff] animate-blink`}
           >
             Silent Code
@@ -71,7 +71,7 @@ export default function Navbar() {
         </div>
       </Link>
       {/* Middle links */}
-      <ul className="hidden md:flex space-x-12 p-4">
+      <ul className="hidden md:flex xl:space-x-12 lg:space-x-6 space-x-3 p-4">
         {navItems.map((item) => (
           <Link key={item.href} href={item.href}>
             <span
@@ -88,7 +88,7 @@ export default function Navbar() {
       <div className="flex items-center space-x-7">
         <Link
           href={"/contact"}
-          className="hidden md:block bg-linear-to-r from-gray-300 to-gray-100 text-[#001F3F] text-base px-12 py-3 rounded-4xl cursor-pointer
+          className="hidden lg:block bg-linear-to-r from-gray-300 to-gray-100 text-[#001F3F] xl:text-base lg:text-sm xl:px-12 text-sm  lg:px-10 py-3 rounded-4xl cursor-pointer
         drop-shadow-[0_0_5px_#fff] drop-shadow-[0_0_1px_#0ff] drop-shadow-[0_0_5px_#0ff]
         hover:from-white hover:to-gray-100 hover:drop-shadow-[0_0_10px_#0ff] transition-all duration-300
 "
@@ -96,7 +96,7 @@ export default function Navbar() {
           Get Started
         </Link>
         <Image
-          className="mr-10 sm:mr-4 cursor-pointer"
+          className="mr-4  cursor-pointer"
           src="/sun.svg"
           alt="Sun"
           width={24}
@@ -111,17 +111,17 @@ export default function Navbar() {
     {/* Mobile Dropdown */}
     <div
   className={`
-    md:hidden fixed top-[72px] left-0 right-0 w-full
+    md:hidden absoulte top-[72px] left-0 right-0 w-full
     bg-[#030F18] text-white text-center
     overflow-hidden z-[998] 
     transition-all duration-300
     ${isopen ? "max-h-96 opacity-100 py-4" : "max-h-0 opacity-0 py-0"}
   `}
 >
-<ul className="flex flex-col space-y-6 px-6 mt-2">
+<ul className="flex flex-col space-y-4 px-6 mt-11">
     {navItems.map((item) => (
       <Link key={item.href} href={item.href} onClick={() => Setisopen(false)}>
-        <span className="text-lg">{item.name}</span>
+        <span className="text-lg" style={{ fontFamily: "Arial, sans-serif" }}>{item.name}</span>
       </Link>
     ))}
   </ul>

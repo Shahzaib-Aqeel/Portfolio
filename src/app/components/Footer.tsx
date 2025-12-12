@@ -46,11 +46,11 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="w-full pt-50 sm:pb-10 pb-40 text-gray-400 mt-20">
+    <footer className="w-full pt-50 sm:pb-10 pb-4 text-gray-400 sm:mt-20 overflow-x-hidden px-4 sm:px-6 md:px-8">
       <Link href="/">
-        <div className="relative cursor-pointer">
+        <div className="relative cursor-pointer max-w-full">
           <Image
-            className="ml-8 sm:-mt-60 -mt-80"
+            className="relative z-30 ml-4 sm:ml-8 sm:-mt-50 -mt-52 max-w-full h-auto"
             src="/tree.png"
             alt="Logo"
             width={400}
@@ -58,13 +58,13 @@ export default function Footer() {
           />
 
           <h1
-            className={`absolute top-8 left-34 sm:text-5xl text-3xl font-extrabold text-[white]`}
+            className={`absolute top-8 left-28 sm:left-32 md:left-36 sm:text-5xl text-2xl md:text-3xl font-extrabold text-[white]`}
           >
             Shahzaib Aqeel
           </h1>
 
           <h1
-            className={`${yellowtail.className} absolute top-20 left-58 font-extrabold text-3xl text-[#C1DEF2]
+            className={`${yellowtail.className} absolute top-16 sm:top-20 left-45 sm:left-52 md:left-56 font-extrabold text-xl sm:text-2xl md:text-3xl text-[#C1DEF2]
             drop-shadow-[0_0_5px_#fff] drop-shadow-[0_0_10px_#0ff] drop-shadow-[0_0_20px_#0ff] animate-blink`}
           >
             Silent Code
@@ -73,16 +73,16 @@ export default function Footer() {
       </Link>
 
       <div>
-        <p className={`${roboto.className} sm:ml-8 mt-10 text-sm text-[#fbfdde] text-center sm:text-left`}>
-          Whether you’re a growing business or an established company, <br />{" "}
-          your website should make an impact. I build modern, <br /> responsive,
-          and high-performing websites that help you attract <br /> customers
+        <p className={`${roboto.className} sm:ml-8 mt-10 px-2 text-sm text-[#fbfdde] text-center sm:text-left max-w-full`}>
+          Whether you're a growing business or an established company, <br className="hidden sm:block" />
+          your website should make an impact. I build modern, <br className="hidden sm:block" /> responsive,
+          and high-performing websites that help you attract <br className="hidden sm:block" /> customers
           and grow your brand.
         </p>
       </div>
       <Link href={"/contact"} className="flex sm:justify-start justify-center">
         <button
-          className="mt-10 ml-10 bg-gradient-to-r from-gray-300 to-gray-100 text-[#001F3F] text-base px-12 py-3 mb-20 rounded-4xl cursor-pointer
+          className="mt-10 sm:ml-10 bg-gradient-to-r from-gray-300 to-gray-100 text-[#001F3F] text-base px-12 py-3 mb-20 rounded-4xl cursor-pointer
                drop-shadow-[0_0_5px_#fff] drop-shadow-[0_0_1px_#0ff] drop-shadow-[0_0_5px_#0ff]
                hover:from-white hover:to-gray-100 hover:drop-shadow-[0_0_10px_#0ff] transition-all duration-300 z-20 relative"
         >
@@ -90,45 +90,47 @@ export default function Footer() {
         </button>
       </Link>
 
-      <div
-        className={`${roboto.className} sm:absolute sm:right-120 sm:top-35 flex flex-col justify-center items-center`}
-      >
-        <h1 className="text-2xl font-bold text-white">Quick Links</h1>
-        <Link href={"/"} className="mt-4 text-white hover:text-blue-300">
-          Home
-        </Link>
-        <Link
-          href={"/projects"}
-          className="mt-4 text-white hover:text-blue-300"
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-8 sm:gap-4 mt-8 sm:mt-0">
+        <div
+          className={`${roboto.className} sm:absolute xl:right-82 lg:right-60 md:right-42 sm:top-40 flex flex-col justify-center items-center sm:items-start`}
         >
-          Projects
-        </Link>
-        <Link href={"/about"} className="mt-4 text-white hover:text-blue-300">
-          About
-        </Link>
-        <Link href={"/blog"} className="mt-4 text-white hover:text-blue-300">
-          Blog
-        </Link>
-        <Link href={"/contact"} className="mt-4 text-white hover:text-blue-300">
-          Contact
-        </Link>
-      </div>
-      <div className="sm:hidden border-t border-2 border-gray-700 mx-8 rounded-2xl mt-5 mb-5"></div>
-      <div
-        className={`${roboto.className} sm:absolute sm:right-50 sm:top-35 flex-col flex justify-center items-center`}
-      >
-        <h1 className="text-2xl font-bold text-white">Social Meida</h1>
-        {socialLinks.map((social, index) => (
-        <Link
-          key={index}
-          href={social.url}
-          target="_blank"
-          className="flex items-center space-x-4 p-4"
+          <h1 className="text-2xl font-bold text-white md:text-xl lg:text-2xl">Quick Links</h1>
+          <Link href={"/"} className="mt-4 text-white hover:text-blue-300">
+            Home
+          </Link>
+          <Link
+            href={"/projects"}
+            className="mt-4 text-white hover:text-blue-300"
+          >
+            Projects
+          </Link>
+          <Link href={"/about"} className="mt-4 text-white hover:text-blue-300">
+            About
+          </Link>
+          <Link href={"/blog"} className="mt-4 text-white hover:text-blue-300">
+            Blog
+          </Link>
+          <Link href={"/contact"} className="mt-4 text-white hover:text-blue-300">
+            Contact
+          </Link>
+        </div>
+        <div className="sm:hidden border-t border-2 border-gray-700 mx-8 rounded-2xl mt-5 mb-5"></div>
+        <div
+          className={`${roboto.className} sm:absolute xl:right-18 lg:right-10 md:right-2 sm:top-40 flex-col flex justify-center items-center sm:items-start`}
         >
-          <span style={{ color: social.color }}>{social.icon}</span>
-          <span className="text-white font-medium">{social.name}</span>
-        </Link>
-      ))}
+          <h1 className="text-2xl font-bold text-white md:text-xl lg:text-2xl md:ml-2 lg:ml-0">Social Meida</h1>
+          {socialLinks.map((social, index) => (
+          <Link
+            key={index}
+            href={social.url}
+            target="_blank"
+            className="flex items-center space-x-4 p-4"
+          >
+            <span style={{ color: social.color }}>{social.icon}</span>
+            <span className="text-white font-medium">{social.name}</span>
+          </Link>
+        ))}
+        </div>
       </div>
       <div className="border-t border-2 border-gray-700 mx-8 rounded-2xl"></div>
       <div>

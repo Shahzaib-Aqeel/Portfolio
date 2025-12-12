@@ -95,14 +95,14 @@ export default function About() {
           ABOUT ME
         </h1>
       </div>
-      <div className="min-h-screen flex sm:flex-row flex-col w-full sm:space-x-30 space-y-10 mt-15 sm:mx-50 px-6">
-        <div className="">
+      <div className="flex sm:flex-row flex-col w-full sm:space-x-8 lg:space-x-12 space-y-10 mt-15 sm:mx-auto sm:max-w-6xl px-4 sm:px-6 md:px-10">
+        <div className="flex-shrink-0">
           <Image
             src={"/shabby.png"}
             alt="Shahzaib Aqeel"
             width={380}
             height={380}
-            className="rounded-2xl shadow-lg border border-gray-300"
+            className="rounded-2xl shadow-lg border border-gray-300 w-full max-w-sm mx-auto sm:mx-0 h-auto"
           />
         </div>
         <div className="space-y-5 text-neutral-300 font-light text-center"
@@ -151,7 +151,7 @@ export default function About() {
             Tools & technologies I work with
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4 sm:p-8 max-w-7xl mx-auto">
           {skills.map((skill, index) => (
             <div
               key={index}
@@ -162,17 +162,17 @@ export default function About() {
               <h3 className="text-xl font-bold mb-2 text-center">
                 {skill.name}
               </h3>
-              <p className="text-sm text-center">{skill.description}</p>
+              <p className="text-sm text-center" style={{ fontFamily: "Arial, sans-serif" }}>{skill.description}</p>
             </div>
           ))}
         </div>
       </div>
-      <div className="sm:mt-20 bg-[#030F18] p-12  text-center">
+      <div className="bg-[#030F18] p-12  text-center">
   <h2 className="text-4xl font-extrabold mb-4 tracking-tight text-white">
     Let’s Build Something Great
   </h2>
 
-  <p className="text-neutral-300 max-w-xl mx-auto leading-relaxed mb-8 text-lg">
+  <p className="text-neutral-300 max-w-xl mx-auto leading-relaxed mb-8 text-lg" style={{ fontFamily: "Arial, sans-serif" }}>
     Have a project in mind or want to collaborate? I'm always open to meaningful
     ideas, creative challenges, and forward-thinking opportunities. Your vision
     deserves a powerful digital experience—let’s bring it to life.
