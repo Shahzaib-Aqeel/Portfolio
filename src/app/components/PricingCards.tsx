@@ -46,7 +46,7 @@ export default function PricingCards() {
       {pricingPlans.map((plan, idx) => (
         <div
           key={idx}
-          className="bg-[#0a0a0a] border border-gray-700 rounded-3xl p-15 flex flex-col justify-between shadow-lg hover:shadow-[#0ff]/50 transform hover:scale-105 transition-all duration-300 hover:border-2
+          className="dark:bg-[#0a0a0a] bg-[#001F3F] border border-gray-700 rounded-3xl p-15 flex flex-col justify-between shadow-lg hover:shadow-[#0ff]/50 transform hover:scale-105 transition-all duration-300 hover:border-2
           hover:border-[#4CC9FF] shadow-[#0ff]/100"
         >
           {/* Plan Name */}

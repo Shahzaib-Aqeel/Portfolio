@@ -38,7 +38,7 @@ export default function ContactForm() {
   };
   return (
     <div
-      className="sm:w-full xl:w-[600px] w-full bg-[#01060A] rounded-2xl mt-10 sm:mt-0 mb-10 sm:mb-0 md:mb-10 lg:mb-0 max-w-full"
+      className="sm:w-full xl:w-[600px] w-full dark:bg-[#01060A] bg-[#001F3F] rounded-2xl mt-10 sm:mt-0 mb-10 sm:mb-0 md:mb-10 lg:mb-0 max-w-full"
       style={{ fontFamily: "Arial, sans-serif" }}
     >
       <form

@@ -64,10 +64,17 @@ export default function Footer() {
           </h1>
 
           <h1
-            className={`${yellowtail.className} absolute top-16 sm:top-20 left-45 sm:left-52 md:left-56 font-extrabold text-xl sm:text-2xl md:text-3xl text-[#C1DEF2]
+            className={`${yellowtail.className} hidden dark:block absolute top-16 sm:top-20 left-45 sm:left-52 md:left-56 font-extrabold text-xl sm:text-2xl md:text-3xl text-[#C1DEF2]
             drop-shadow-[0_0_5px_#fff] drop-shadow-[0_0_10px_#0ff] drop-shadow-[0_0_20px_#0ff] animate-blink`}
           >
             Silent Code
+          </h1>
+
+          <h1
+            className={`${yellowtail.className} dark:hidden block absolute top-16 sm:top-20 left-45 sm:left-52 md:left-56 font-extrabold text-xl sm:text-2xl md:text-3xl text-[white]
+             animate-blink`}
+          >
+            Code & Light
           </h1>
         </div>
       </Link>
@@ -82,9 +89,9 @@ export default function Footer() {
       </div>
       <Link href={"/contact"} className="flex sm:justify-start justify-center">
         <button
-          className="mt-10 sm:ml-10 bg-gradient-to-r from-gray-300 to-gray-100 text-[#001F3F] text-base px-12 py-3 mb-20 rounded-4xl cursor-pointer
-               drop-shadow-[0_0_5px_#fff] drop-shadow-[0_0_1px_#0ff] drop-shadow-[0_0_5px_#0ff]
-               hover:from-white hover:to-gray-100 hover:drop-shadow-[0_0_10px_#0ff] transition-all duration-300 z-20 relative"
+          className="mt-10 sm:ml-10 dark:bg-gradient-to-r dark:from-gray-300 dark:to-gray-100 dark:text-[#001F3F] text-base px-12 py-3 mb-20 rounded-4xl cursor-pointer
+               dark:drop-shadow-[0_0_5px_#fff] dark:drop-shadow-[0_0_1px_#0ff] dark:drop-shadow-[0_0_5px_#0ff]
+               dark:hover:from-white dark:hover:to-gray-100 dark:hover:drop-shadow-[0_0_10px_#0ff] transition-all duration-300 z-20 relative bg-[#1885f1] hover:bg-white text-white hover:text-[#001F3F]"
         >
           Contact Me
         </button>

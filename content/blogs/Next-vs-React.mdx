@@ -1,0 +1,391 @@
+---
+title: "WHY I CHOSE NEXT.JS OVER REACT ONLY"
+description: "Next.js vs React has been a topic of interest for many developers building modern web applications. In this post, I share why I chose Next.js over plain React, the lessons I learned while building a real-world projects, and how features like the App Router, server components, and SEO optimizations made development faster and more efficient."
+date: "Dec 13, 2025"
+image: "/nextjs-vs-react.png"
+---
+
+<div className="dark:text-gray-200 text-black sm:leading-loose">
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">INTRODUCTION</h1>
+</div>
+
+ 
+<div className="mb-5">
+When I started learning modern web development, <strong>React</strong> was the first technology that truly clicked for me. It introduced me to component-based architecture, reusable UI, and state-driven rendering. I built multiple projects using React only, and it helped me understand how modern frontends work.
+
+However, as my projects became more realistic — blogs, portfolios, and full-stack apps — I started facing limitations that React alone didn’t solve easily. That’s when I moved to <strong>Next.js</strong>.
+
+In this blog, I’ll explain <strong>why I chose Next.js over React only</strong>, with an honest comparison, real-world reasoning, and clear advantages and disadvantages of both.
+
+</div>
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"></div>
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">WHAT IS REACT (REACT ONLY APPROACH) ?</h1>
+</div>
+
+
+
+<div className="mb-5">
+React is a <strong> JavaScript library </strong> focused on building user interfaces. It handles only the <strong>view layer</strong> of an application.
+
+When using React alone, you usually need: 
+
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+  <li>React (CRA or Vite)</li>
+  <li>React Router for routing</li>
+  <li>A separate backend (Node.js, Express, Firebase, etc.)</li>
+  <li>Manual SEO handling</li>
+  <li>Extra performance optimizations</li>
+</ul>
+
+
+React gives you flexibility, but you are responsible for wiring everything together.
+
+</div>
+
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">WHAT IS NEXT.JS</h1>
+</div>
+
+
+<div className="mb-5">
+Next.js is a <strong>full-stack React framework</strong>. It doesn’t replace React — it enhances it.
+
+Next.js provides:
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>File-based routing</li>
+<li>Server-Side Rendering (SSR)</li>
+<li>Static Site Generation (SSG)</li>
+<li>API routes (backend inside the same project)</li>
+<li>Built-in SEO support</li>
+<li>Automatic performance optimizations</li>
+</ul>
+
+Next.js focuses on helping developers build <strong>production-ready applications faster</strong>.
+
+</div>
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">ROUTING COMPARISON</h1>
+</div>
+
+<h1 className="sm:text-xl text-lg font-semibold mb-5 dark:text-gray-50 text-black">1. React Only Routing </h1>
+<div className="mb-5">
+Routing is not built into React. You must install and configure **React Router**.
+
+```js
+<Route path="/blog/:slug" element={<Blog />} />
+```
+
+Problems with this approach:
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>Extra setup required</li>
+<li>Routes spread across files</li>
+<li>Can get messy in large projects</li>
+</ul>
+</div>
+
+
+
+
+<h1 className="sm:text-xl text-lg font-semibold mb-5 dark:text-gray-50 text-black">2. Next.js Routing </h1>
+<div className="mb-5">
+Next.js uses **file-based routing**:
+
+```txt
+app/blog/[slug]/page.tsx
+```
+
+Benefits:
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>No routing configuration</li>
+<li>Clean and predictable structure</li>
+<li>Automatic support for dynamic routes</li>
+</ul>
+This alone saved me a lot of development time.
+</div>
+
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">SEO: THE MAIN REASON I SWITCHED</h1>
+</div>
+
+<h1 className="sm:text-xl text-lg font-semibold mb-5 dark:text-gray-50 text-black">1. SEO Problems in React Only</h1>
+<div className="mb-5">
+
+React apps are **client-side rendered** by default.
+
+Issues:
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>Search engines see minimal HTML</li>
+<li>Blog content loads after JavaScript</li>
+<li>Poor SEO without extra tools</li>
+</ul>
+You often need:
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>React Helmet</li>
+<li>Prerendering services</li>
+<li>Extra configuration</li>
+</ul>
+</div>
+
+
+
+<h1 className="sm:text-xl text-lg font-semibold mb-5 dark:text-gray-50 text-black">2. SEO Advantages in Next.js</h1>
+<div className="mb-5">
+Next.js supports **SSR and SSG**, meaning HTML is generated before the page reaches the browser.
+
+Example:
+
+```ts
+export const metadata = {
+  title: "Why I Chose Next.js",
+  description: "Next.js vs React comparison",
+};
+```
+
+This makes Next.js perfect for:
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>Blogs</li>
+<li>Portfolios</li>
+<li>Marketing pages</li>
+<li>Content-heavy websites</li>
+</ul>
+</div>
+
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">PERFOMANCE COMPARISON</h1>
+</div>
+
+
+<h1 className="text-xl font-semibold mb-5 dark:text-gray-50 text-black">1. React Only Performance</h1>
+<div className="mb-5">
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>Blank page initially</li>
+<li>JavaScript must load before content</li>
+<li>Slower first paint</li>
+</ul>
+</div>
+
+
+
+<h1 className="sm:text-xl text-lg font-semibold mb-5 dark:text-gray-50 text-black">2. Next.js Performance</h1>
+<div className="mb-5">
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>Pre-rendered pages</li>
+<li>Faster initial load</li>
+<li>Better Core Web Vitals</li>
+</ul>
+Next.js feels faster by default without heavy optimization work.
+</div>
+
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">BACKEND & API HANDLING</h1>
+</div>
+
+
+<h1 className="text-xl font-semibold mb-5 dark:text-gray-50 text-black">1. React Only</h1>
+<div className="mb-5">
+React needs a separate backend:
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>Node.js + Express</li>
+<li>CORS handling</li>
+<li>Separate deployment</li>
+</ul>
+</div>
+
+
+<h1 className="sm:text-xl text-lg font-semibold mb-5 dark:text-gray-50 text-black">2. Next.js </h1>
+<div className="mb-5">
+Next.js includes **API routes**:
+
+```ts
+app / api / blogs / route.ts;
+```
+
+Benefits:
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>Frontend and backend together</li>
+<li>Easier deployment</li>
+<li>Cleaner full-stack workflow</li>
+</ul>
+</div>
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">PROJECT STRUCTURE COMPARISON</h1>
+</div>
+
+
+<h1 className="text-xl font-semibold mb-5 dark:text-gray-50 text-black">1. React Only</h1>
+<div className="mb-5">
+```txt
+src/
+  components/
+  pages/
+  hooks/
+  utils/
+```
+</div>
+
+
+<h1 className="sm:text-xl text-lg font-semibold mb-5 dark:text-gray-50 text-black">2. Next.js</h1>
+<div className="mb-5">
+```txt
+app/
+  page.tsx
+  blog/
+    [slug]/
+      page.tsx
+  api/
+lib/
+components/
+```
+
+Next.js enforces better structure, which helps as projects scale.
+</div>
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">ADVANTAGES OF NEXT.JS</h1>
+</div>
+
+<div className="mb-5">
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>Built-in routing</li>
+<li>Excellent SEO</li>
+<li>Server-side rendering</li>
+<li>Static generation</li>
+<li>API routes</li>
+<li>Great performance</li>
+<li>Production-ready setup</li>
+</ul>
+</div>
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">DISADVANTAGES OF NEXT.JS</h1>
+</div>
+<div className="mb-5">
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>Steeper learning curve</li>
+<li>More concepts to learn (SSR, SSG, hydration)</li>
+<li>Overkill for very small apps</li>
+</ul>
+</div>
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">ADVANTAGES OF REACT ONLY</h1>
+</div>
+
+<div className="mb-5">
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>Simple and flexible</li>
+<li>Easy to learn</li>
+<li>Lightweight</li>
+<li>Great for dashboards and internal tools</li>
+</ul>
+</div>
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">DISADVANTAGES OF REACT ONLY</h1>
+</div>
+<div className="mb-5">
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>GreatPoor SEO by default</li>
+<li>GreatManual routing setup</li>
+<li>GreatExtra performance work needed</li>
+<li>GreatNot ideal for content-heavy websites</li>
+</ul>
+</div>
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">WHAT REACT ONLY MAKE SENSE</h1>
+</div>
+<div className="mb-5">
+I would still choose React only when:
+<ul className="list-disc pl-6 space-y-2 dark:text-gray-300 text-black">
+<li>GreatSEO is not important</li>
+<li>GreatBuilding small internal tools</li>
+<li>GreatBackend already exists</li>
+<li>GreatApp is highly interactive</li>
+</ul>
+</div>
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">FINAL VERDICT</h1>
+</div>
+<div className="mb-5">
+I chose **Next.js over React only** because I want to build **real-world, scalable, production-ready applications**.
+
+Next.js solves many common problems automatically and allows me to focus on building features instead of configuration.
+
+React is powerful, but **Next.js takes React to the next level**.
+</div>
+
+<div className="w-full mb-4 h-px bg-gray-700 rounded-full"> </div>
+
+<div className="flex items-center mb-5">
+  <div className="bg-[#43B7FF]  w-2 h-8 mr-3"></div>
+  <h1 className="sm:text-2xl text-xl font-semibold dark:text-gray-50 text-black">CONCLUSION</h1>
+</div>
+<div className="mb-5">
+React taught me how to build components.
+
+Next.js taught me how to build **complete web applications**.
+
+For blogs, portfolios, SaaS products, and business websites, **Next.js is my preferred choice**.
+</div>
+</div>

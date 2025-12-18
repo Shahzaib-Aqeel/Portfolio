@@ -2,10 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Yellowtail:wght@400&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@layer base {
+  body {
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    @apply bg-white text-black dark:bg-black dark:text-white;
+  }
 }
+
 
 @theme inline {
   --color-background: var(--background);
@@ -14,19 +20,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: "Oswald", Arial, Helvetica, sans-serif;
-  
-}
 
 @keyframes twinkle {
   0%, 100% {

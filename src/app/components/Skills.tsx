@@ -84,7 +84,7 @@ export default function Skills() {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="bg-[#0a0a0a] text-white rounded-2xl p-6 flex flex-col items-center justify-center
+            className="bg-[#001F3F] text-white rounded-2xl p-6 flex flex-col items-center justify-center
                        shadow-md hover:shadow-[#0ff] hover:scale-105 transition-all duration-300 cursor-pointer"
           >
             <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">{skill.icon}</div>
@@ -100,9 +100,9 @@ export default function Skills() {
       <div className="flex justify-center mt-6 sm:mt-8">
         <Link href={"/projects"}>
           <button
-            className="bg-gradient-to-r from-gray-300 to-gray-100 text-[#001F3F] text-sm sm:text-base px-8 sm:px-12 py-2 sm:py-3 mb-12 sm:mb-20 rounded-3xl sm:rounded-4xl
-                       drop-shadow-[0_0_5px_#fff] drop-shadow-[0_0_1px_#0ff] drop-shadow-[0_0_5px_#0ff]
-                       hover:from-white hover:to-gray-100 hover:drop-shadow-[0_0_10px_#0ff] transition-all duration-300"
+            className="dark:bg-gradient-to-r dark:from-gray-300 dark:to-gray-100 dark:text-[#001F3F] text-sm sm:text-base px-8 sm:px-12 py-2 sm:py-3 mb-12 sm:mb-20 rounded-3xl sm:rounded-4xl
+                       dark:drop-shadow-[0_0_5px_#fff] dark:drop-shadow-[0_0_1px_#0ff] dark:drop-shadow-[0_0_5px_#0ff] bg-[#001F3F] hover:bg-[#43B7FF] hover:text-[#001F3F] text-white
+                       dark:hover:from-white hdark:over:to-gray-100 dark:hover:drop-shadow-[0_0_10px_#0ff] transition-all duration-300" 
           >
             View My Work
           </button>

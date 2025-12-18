@@ -24,10 +24,10 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <main className="bg-[#030F18]">
-      <div className="bg-linear-to-r from-[#00041F] to-[#0A2630] text-white sm:h-[350px] h-[180px]  pt-8 [clip-path:ellipse(80%_100%_at_50%_0%)]">
-        <Stars />
-        <h1 className="sm:text-6xl text-4xl font-bold mb-4 sm:pt-42 pt-12 px-10 text-center">
+    <main className="dark:bg-[#030F18] bg-white transition-colors duration-300">
+          <div className="dark:bg-linear-to-r dark:from-[#00041F] dark:to-[#0A2630] dark:text-white bg-[#001F3F]  sm:h-[350px] h-[180px] pt-8 [clip-path:ellipse(80%_100%_at_50%_0%)]">
+            <div className="hidden dark:block"><Stars /></div>
+            <h1 className="sm:text-6xl text-4xl font-bold mb-4 sm:pt-42 pt-12 px-10 text-center text-white">
           CONTACT
         </h1>
       </div>
@@ -35,25 +35,21 @@ export default function ContactPage() {
         <div className="flex flex-col xl:flex-row items-start justify-between gap-8 sm:gap-10">
           {/* Left: Text */}
           <div className="space-y-2 w-full xl:max-w-md">
-            <h1 className="text-[#43B7DA] tracking-widest text-xl">
+            <h1 className="dark:text-[#43B7DA] text-[#707070] tracking-widest text-xl">
               CONTACT US
             </h1>
-            <h1 className="text-4xl sm:text-6xl">GET IN TOUCH</h1>
-            <p style={{ fontFamily: "Arial, sans-serif" }} className="-mb-0.5">
+            <h1 className="text-4xl sm:text-6xl text-[#1A1A1A] dark:text-white">GET IN TOUCH</h1>
+            <div className="text-[#1A1A1A] dark:text-white" style={{ fontFamily: "Arial, sans-serif" }}>
+            <p className="-mb-0.5">
               Send us an email and let us know everything you want out of a new
-              site. We
-            </p>
-            <p style={{ fontFamily: "Arial, sans-serif" }} className="-mb-0.5">
-              respond to everyone within 24 hours of contacting us. Or give us a
-              call and reach us
-            </p>
-            <p style={{ fontFamily: "Arial, sans-serif" }} className="-mb-0.5">
-              immediately for a chat. If we are unavailable we will call back
+              site. We respond to everyone within 24 hours of contacting us. Or give us a
+              call and reach us immediately for a chat. If we are unavailable we will call back
               same day.
             </p>
+            </div>
             <div className="mt-6 text-lg flex items-center">
               <div
-                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#788a94] shadow-[0_0_35px_15px_rgba(17,54,77,0.9)]
+                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#788a94] dark:shadow-[0_0_35px_15px_rgba(17,54,77,0.9)]
  flex items-center justify-center mr-5 flex-shrink-0"
               >
                 <Image
@@ -61,10 +57,10 @@ export default function ContactPage() {
                   alt="WhatsApp Icon"
                   width={30}
                   height={30}
-                  className=""
+                  className="invert dark:invert-0"
                 />
               </div>
-              <div className="flex flex-col space-y-1">
+              <div className="flex flex-col space-y-1 text-[#1A1A1A] dark:text-white">
                 <span>Whatsapp</span>
                 <span style={{ fontFamily: "Arial, sans-serif" }}>
                   +92 0320 5886722
@@ -73,7 +69,7 @@ export default function ContactPage() {
             </div>
             <div className="mt-6 text-lg flex items-center">
               <div
-                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#788a94] shadow-[0_0_35px_15px_rgba(17,54,77,0.9)]
+                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#788a94] dark:shadow-[0_0_35px_15px_rgba(17,54,77,0.9)]
  flex items-center justify-center mr-5 flex-shrink-0"
               >
                 <Image
@@ -81,10 +77,10 @@ export default function ContactPage() {
                   alt="Email Icon"
                   width={30}
                   height={30}
-                  className=""
+                  className="invert dark:invert-0"
                 />
               </div>
-              <div className="flex flex-col space-y-1">
+              <div className="flex flex-col space-y-1 text-[#1A1A1A] dark:text-white">
                 <span>Email</span>
                 <span style={{ fontFamily: "Arial, sans-serif" }}>
                   shabbych366@gmail.com
@@ -93,7 +89,7 @@ export default function ContactPage() {
             </div>
             <div className="mt-6 text-lg flex items-center">
               <div
-                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#788a94] shadow-[0_0_35px_15px_rgba(17,54,77,0.9)]
+                className="w-12 h-12 sm:w-14 sm:h-14 rounded-full border-2 border-[#788a94] dark:shadow-[0_0_35px_15px_rgba(17,54,77,0.9)]
  flex items-center justify-center mr-5 flex-shrink-0"
               >
                 <Image
@@ -101,10 +97,10 @@ export default function ContactPage() {
                   alt="Location Icon"
                   width={30}
                   height={30}
-                  className=""
+                  className="invert dark:invert-0"
                 />
               </div>
-              <div className="flex flex-col space-y-1">
+              <div className="flex flex-col space-y-1 text-[#1A1A1A] dark:text-white">
                 <span>Location</span>
                 <span style={{ fontFamily: "Arial, sans-serif" }}>
                   Pakistan
@@ -116,13 +112,13 @@ export default function ContactPage() {
           <ContactForm />
         </div>
       </div>
-      <div className="">
+      <div className="mb-10 dark:mb-0">
         <Image
           src="/trees-dark.svg"
           alt="trees"
           width={700}
           height={700}
-          className="xl:-mt-80 hidden xl:block max-w-full h-auto"
+          className="hidden dark:block xl:-mt-80 max-w-full h-auto" 
         />
       </div>
     </main>

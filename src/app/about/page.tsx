@@ -88,10 +88,10 @@ const skills = [
 
 export default function About() {
   return (
-    <main className="bg-[#030F18]">
-      <div className="bg-linear-to-r from-[#00041F] to-[#0A2630] text-white sm:h-[350px] h-[180px] pt-8 [clip-path:ellipse(80%_100%_at_50%_0%)]">
-        <Stars />
-        <h1 className="sm:text-6xl text-4xl font-bold mb-4 sm:pt-42 pt-12 px-10 text-center">
+    <main className="dark:bg-[#030F18] bg-white transition-colors duration-300">
+      <div className="dark:bg-linear-to-r dark:from-[#00041F] dark:to-[#0A2630] dark:text-white sm:h-[350px] h-[180px] pt-8 [clip-path:ellipse(80%_100%_at_50%_0%)] bg-[#001F3F]">
+        <div className="hidden dark:block"><Stars /></div>
+        <h1 className="sm:text-6xl text-4xl font-bold mb-4 sm:pt-42 pt-12 px-10 text-center text-white">
           ABOUT ME
         </h1>
       </div>
@@ -105,7 +105,7 @@ export default function About() {
             className="rounded-2xl shadow-lg border border-gray-300 w-full max-w-sm mx-auto sm:mx-0 h-auto"
           />
         </div>
-        <div className="space-y-5 text-neutral-300 font-light text-center"
+        <div className="space-y-5 dark:text-neutral-300 text-[#1A1A1A] font-light text-center"
         style={{ fontFamily: "Arial, sans-serif" }}>
           <p>
             I began my development journey experimenting with frontend
@@ -135,9 +135,9 @@ export default function About() {
 
           <Link href={"/projects"}>
             <button
-              className="mt-6 bg-linear-to-r from-gray-300 to-gray-100 text-[#001F3F] text-base px-12 py-3 mb-20 rounded-4xl cursor-pointer
-               drop-shadow-[0_0_5px_#fff] drop-shadow-[0_0_1px_#0ff] drop-shadow-[0_0_5px_#0ff]
-               hover:from-white hover:to-gray-100 hover:drop-shadow-[0_0_10px_#0ff] transition-all duration-300 z-20 relative"
+              className="mt-6 dark:bg-linear-to-r dark:from-gray-300 dark:to-gray-100 dark:text-[#001F3F] text-base px-12 py-3 mb-20 rounded-4xl cursor-pointer
+               dark:drop-shadow-[0_0_5px_#fff] dark:drop-shadow-[0_0_1px_#0ff] dark:drop-shadow-[0_0_5px_#0ff]
+               dark:hover:from-white dark:hover:to-gray-100 dark:hover:drop-shadow-[0_0_10px_#0ff] transition-all duration-300 z-20 relative bg-[#001F3F] hover:bg-[#43B7FF] text-white hover:text-[#001F3F]"
             >
               View My Work
             </button>
@@ -155,7 +155,7 @@ export default function About() {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="bg-[#0a0a0a] text-white rounded-2xl p-6 flex flex-col items-center justify-center 
+              className="bg-[#001F3F] text-white rounded-2xl p-6 flex flex-col items-center justify-center 
                         shadow-md hover:shadow-[#0ff] hover:scale-105 transition-all duration-300 cursor-pointer"
             >
               <div className="text-4xl mb-4">{skill.icon}</div>
@@ -167,12 +167,12 @@ export default function About() {
           ))}
         </div>
       </div>
-      <div className="bg-[#030F18] p-12  text-center">
-  <h2 className="text-4xl font-extrabold mb-4 tracking-tight text-white">
+      <div className="dark:bg-[#030F18] bg-white p-12  text-center">
+  <h2 className="text-4xl font-extrabold mb-4 tracking-tight dark:text-white text-black">
     Let’s Build Something Great
   </h2>
 
-  <p className="text-neutral-300 max-w-xl mx-auto leading-relaxed mb-8 text-lg" style={{ fontFamily: "Arial, sans-serif" }}>
+  <p className="dark:text-neutral-300 text-black max-w-xl mx-auto leading-relaxed mb-8 text-lg" style={{ fontFamily: "Arial, sans-serif" }}>
     Have a project in mind or want to collaborate? I'm always open to meaningful
     ideas, creative challenges, and forward-thinking opportunities. Your vision
     deserves a powerful digital experience—let’s bring it to life.

@@ -47,13 +47,13 @@ export const metadata = {
 export default function HomePage() {
   return (
     <div>
-      <div className="bg-linear-to-r from-[#01041F] to-[#08222E] pt-8">
-        <Stars />
+      <div className="dark:bg-linear-to-r dark:from-[#01041F] dark:to-[#08222E] bg-[#001F3F] pt-8 transition-colors duration-300">
+        <div className="hidden dark:block"><Stars /></div>
         <div className="overflow-x-hidden">
           <main className="min-h-screen items-center">
-            <div className="px-4 sm:px-6 md:px-10 max-w-full">
+            <div className="px-4 sm:px-6 md:px-10 max-w-full text-white">
               <p className="text-sm mt-16 sm:mt-24 sm:text-base text-center sm:text-left">
-                CUSTOM DESIGNED, CUSTOM CODED
+                CUSTOM DESIGNS, CUSTOM CODED
               </p>
               <h1 className="sm:text-6xl text-4xl font-bold sm:mt-4 mt-2 text-center sm:text-left">
                 Hello, I'm <br /> Shahzaib Aqeel
@@ -76,9 +76,9 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-6">
                 <Link href="/projects" className="mt-8 inline-block">
                   <button
-                    className="bg-linear-to-r from-gray-300 to-gray-100 text-[#001F3F] sm:text-base sm:px-12 sm:py-3 rounded-4xl text-sm cursor-pointer px-6 py-3 sm:ml-0
-        drop-shadow-[0_0_5px_#fff] drop-shadow-[0_0_1px_#0ff] drop-shadow-[0_0_5px_#0ff]
-        hover:from-white hover:to-gray-100 hover:drop-shadow-[0_0_10px_#0ff] transition-all duration-300 z-20 relative"
+                    className="dark:bg-linear-to-r dark:from-gray-300 dark:to-gray-100 dark:text-[#001F3F] sm:text-base sm:px-12 sm:py-3 rounded-4xl text-sm cursor-pointer px-6 py-3 sm:ml-0
+        dark:drop-shadow-[0_0_5px_#fff] dark:drop-shadow-[0_0_1px_#0ff] dark:drop-shadow-[0_0_5px_#0ff]
+        dark:hover:from-white dark:hover:to-gray-100 dark:hover:drop-shadow-[0_0_10px_#0ff] transition-all duration-300 z-20 relative hover:bg-[white] text-[#001F3F] bg-[#43B7FF]"
                   >
                     View My Work
                   </button>
@@ -87,9 +87,9 @@ export default function HomePage() {
                   <button
                     className="
   sm:px-12 sm:py-3 rounded-4xl cursor-pointer px-6 py-3 sm:text-base text-sm
-  border-2 border-white text-white mt-8 inline-block
-  bg-linear-to-r from-[#030F18] to-[#020F25]
-  hover:from-[#43B7FF] hover:to-[#43B7FF]
+  dark:border-2 dark:border-white text-white mt-8 inline-block
+  dark:bg-linear-to-r dark:from-[#030F18] dark:to-[#020F25] hover:bg-[#43B7FF] hover:text-[#001F3F]
+  dark:hover:from-[#43B7FF] dark:hover:to-[#43B7FF] 
   transition-all duration-300 z-20 relative"
                   >
                     About Me
@@ -112,10 +112,10 @@ export default function HomePage() {
                 alt=""
                 width={600}
                 height={400}
-                className="hidden sm:block w-full h-auto absolute z-10 xl:-mt-[130px] lg:-mt-[27px] md:-mt-[200px] max-w-full"
+                className="hidden dark:sm:block w-full h-auto absolute z-10 xl:-mt-[130px] lg:-mt-[27px] md:-mt-[200px] max-w-full transition-all duration-800"
               />
             </div>
-            <div className="bg-[#030F18] h-max sm:mt-65 mt-10 pt-10 md:mt-7 lg:mt-65">
+            <div className="dark:bg-[#030F18] bg-white h-max sm:mt-65 mt-10 pt-10 md:mt-7 lg:mt-65">
               <Skills />
             </div>
           </main>
